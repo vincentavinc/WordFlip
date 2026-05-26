@@ -266,10 +266,10 @@ input:invalid:not(:placeholder-shown),textarea:invalid:not(:placeholder-shown){
 }
 
 /* decks */
-.deck-grid{
-  display:grid;
-  gap:18px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 360px));
+.deck-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: start;
   align-items: stretch;
 }
@@ -281,6 +281,7 @@ input:invalid:not(:placeholder-shown),textarea:invalid:not(:placeholder-shown){
   min-height: 250px;
   display: flex;
   flex-direction: column;
+  max-width: 360px;
 
   &:hover{
     transform:translateY(-4px);
@@ -380,13 +381,15 @@ input:invalid:not(:placeholder-shown),textarea:invalid:not(:placeholder-shown){
 }
 
 .deck-grid>.empty-state{
-  grid-column:1/-1
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
 }
 
 /* words */
 .card-list{
-  display:grid
-  ;gap:14px
+  display:grid;
+  gap:14px
 }
 
 .word-card{

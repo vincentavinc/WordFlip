@@ -5,7 +5,7 @@
  *
  * @type {string}
  */
-const CACHE_NAME = "wordflip-cache-v8";
+const CACHE_NAME = "wordflip-cache-v9";
 
 /**
  * Seznam souborů, které se mají uložit do cache pro offline režim.
