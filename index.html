@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WordFlip</title>
+  <meta name="description" content="Webová aplikace pro učení anglických slovíček pomocí kartiček.">
+
+  <link rel="icon" href="./assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="/" class="logo" data-link aria-label="Přejít na hlavní stránku">
+        <img src="./assets/icons/logo.svg" alt="" class="logo-icon">
+        <span>WordFlip</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Hlavní navigace">
+        <a href="/" data-link>
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3 3 7.5 12 12l9-4.5L12 3Z"></path>
+            <path d="M3 12l9 4.5 9-4.5"></path>
+            <path d="M3 16.5 12 21l9-4.5"></path>
+          </svg>
+          <span>Balíčky</span>
+        </a>
+
+        <a href="/stats" data-link>
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 19V5"></path>
+            <path d="M4 19h16"></path>
+            <path d="M8 16v-5"></path>
+            <path d="M12 16V8"></path>
+            <path d="M16 16v-9"></path>
+          </svg>
+          <span>Statistiky</span>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          id="musicToggleBtn"
+          class="music-btn"
+          type="button"
+          aria-label="Zapnout hudbu"
+          title="Zapnout hudbu"
+        >
+          <svg class="music-icon music-icon-off" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 9v6h4l5 5V4L8 9H4Z"></path>
+            <path d="M18 9l4 4"></path>
+            <path d="M22 9l-4 4"></path>
+          </svg>
+
+          <svg class="music-icon music-icon-on" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 9v6h4l5 5V4L8 9H4Z"></path>
+            <path d="M17 9.5a4 4 0 0 1 0 5"></path>
+            <path d="M19.5 7a7.5 7.5 0 0 1 0 10"></path>
+          </svg>
+        </button>
+
+        <span id="networkStatus" class="network-status">
+          Online
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="app container" tabindex="-1">
+    <section class="welcome-section">
+      <h1>Učení anglických slovíček</h1>
+
+      <p>
+        Vytvářej vlastní balíčky, přidávej kartičky a procvičuj anglická slovíčka pomocí flashcards.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        WordFlip — webová klientská aplikace.
+      </p>
+    </div>
+  </footer>
+
+  <audio id="flipSound" src="./assets/audio/flip.mp3" preload="auto"></audio>
+  <audio id="correctSound" src="./assets/audio/correct.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="./assets/audio/wrong.mp3" preload="auto"></audio>
+  <audio id="backgroundMusic" src="./assets/audio/background.mp3" preload="auto" loop></audio>
+
+  <noscript>
+    <p>
+      Tato aplikace vyžaduje zapnutý JavaScript.
+    </p>
+  </noscript>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

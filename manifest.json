@@ -1,0 +1,16 @@
+{
+  "name": "WordFlip",
+  "short_name": "WordFlip",
+  "description": "Webová aplikace pro učení anglických slovíček pomocí kartiček.",
+  "start_url": "./#/",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "./assets/icons/logo.svg",
+      "sizes": "100x100",
+      "type": "image/svg+xml"
+    }
+  ]
+}
